@@ -1,8 +1,8 @@
-cerebro-docker
+cerebro-docker-arm
 --------------
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/lmenezes/cerebro.svg)](https://hub.docker.com/r/lmenezes/cerebro)
-
+### Note
+This project is a fork from [cerebro-docker](https://github.com/lmenezes/cerebro-docker) which supports ARM machine like M1 MacBook Pro.
 
 cerebro-docker contains the official docker files for [cerebro](https://github.com/lmenezes/cerebro) project.
 Images are periodically uploaded in [lmenezes/cerebro](https://hub.docker.com/r/lmenezes/cerebro/) docker hub repo.
@@ -12,13 +12,13 @@ Images are periodically uploaded in [lmenezes/cerebro](https://hub.docker.com/r/
 For using latest cerebro execute:
 
 ```
-docker run -p 9000:9000 lmenezes/cerebro
+docker run -p 9000:9000 crossrt/cerebro-docker-arm
 ```
 
 For using a specific version run:
 
 ```
-docker run -p 9000:9000 lmenezes/cerebro:0.8.3
+docker run -p 9000:9000 crossrt/cerebro-docker-arm:0.9.4
 ```
 
 ### Configuration

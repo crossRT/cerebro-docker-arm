@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim as builder
+FROM docker.io/arm64v8/openjdk:11-jre-slim as builder
 
 ARG CEREBRO_VERSION=0.9.4
 
@@ -9,7 +9,7 @@ RUN  apt-get update \
   | tar xzv --strip-components 1 -C /opt/cerebro \
  && sed -i '/<appender-ref ref="FILE"\/>/d' /opt/cerebro/conf/logback.xml
 
-FROM openjdk:11-jre-slim
+FROM docker.io/arm64v8/openjdk:11-jre-slim
 
 COPY --from=builder /opt/cerebro /opt/cerebro
 
